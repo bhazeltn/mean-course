@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { post } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-post-create',
   templateUrl: './post-create.component.html'})
 export class PostCreateComponent {
   newPost = 'No Content';
+  enteredValue = '';
 
   onAddPost() {
-    this.newPost = 'The user\'s post';
+    this.newPost = this.enteredValue;
   }
 }
